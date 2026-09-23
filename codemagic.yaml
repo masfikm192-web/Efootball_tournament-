@@ -6,11 +6,8 @@ workflows:
     environment:
       flutter: stable
     scripts:
-      - name: Get Flutter packages
+      - name: Build APK
         script: |
-          flutter packages pub get
-      - name: Build Android APK
-        script: |
-          flutter build apk --debug
+          flutter build apk
     artifacts:
-      - build/app/outputs/flutter-apk/*.apk
+      - build/app/outputs/flutter-apk/*.apoin
